@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เรื่องของสิว วิธีการดูแลและรักษาผิว</title>
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9fbfd;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ส่วนของ Navigation Bar */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff7b7b;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff7b7b;
+        }
+
+        /* ส่วนเนื้อหาหลัก */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+
+        .content-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #ff7b7b;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #fff5f5;
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* สำหรับหน้าจอมือถือ */
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero-section h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SkinCare.</a>
+            <ul class="nav-links">
+                <li><a href="#what-is-acne">เรื่องของสิว</a></li>
+                <li><a href="#causes">สาเหตุ</a></li>
+                <li><a href="#treatment">การกำจัดสิว</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ส่วนเนื้อหา -->
+    <div class="container">
+        
+        <header class="hero-section">
+            <h1>คู่มือการดูแลและกู้ผิวใส</h1>
+            <p>เข้าใจสาเหตุและวิธีจัดการสิวอย่างถูกวิธีเพื่อผิวสุขภาพดีในระยะยาว</p>
+        </header>
+
+        <!-- ส่วนที่ 1: สิวคืออะไร -->
+        <section id="what-is-acne" class="content-card">
+            <h2>สิว คืออะไร?</h2>
+            <p>สิว (Acne) เป็นอาการอักเสบของผิวหนังที่เกิดขึ้นจากการอุดตันของน้ำมัน (Sebum) และเซลล์ผิวที่ตายแล้วบริเวณรูขุมขน ซึ่งมักจะเกิดขึ้นบ่อยในกลุ่มวัยรุ่นเนื่องจากการเปลี่ยนแปลงของฮอร์โมน แต่ก็สามารถเกิดขึ้นได้กับทุกช่วงวัยเช่นกัน</p>
+        </section>
+
+        <!-- ส่วนที่ 2: สาเหตุการเกิดสิว -->
+        <section id="causes" class="content-card">
+            <h2>สาเหตุหลักของการเกิดสิว</h2>
+            <p>การเกิดสิวมาจากหลายปัจจัยร่วมกัน ทั้งภายในและภายนอกร่างกาย:</p>
+            <ul>
+                <li><strong>ฮอร์โมน:</strong> การเพิ่มขึ้นของฮอร์โมนแอนโดรเจนกระตุ้นให้ต่อมไขมันผลิตน้ำมันมากขึ้น</li>
+                <li><strong>สิ่งสกปรกอุดตัน:</strong> ฝุ่นควัน เครื่องสำอาง หรือเซลล์ผิวเก่าที่ผลัดออกไม่หมด</li>
+                <li><strong>แบคทีเรีย C. acnes:</strong> แบคทีเรียที่เจริญเติบโตได้ดีในรูขุมขนที่อุดตัน จนทำให้เกิดการอักเสบ</li>
+                <li><strong>พฤติกรรมส่วนตัว:</strong> การล้างหน้าไม่สะอาด ความเครียด หรือการนอนพักผ่อนไม่เพียงพอ</li>
+            </ul>
+        </section>
+
+        <!-- ส่วนที่ 3: การกำจัดสิว -->
+        <section id="treatment" class="content-card">
+            <h2>แนวทางการกำจัดสิวและดูแลผิว</h2>
+            <p>วิธีลดและป้องกันการเกิดสิวอย่างเห็นผลและปลอดภัยต่อผิวหน้า:</p>
+            <ul>
+                <li><strong>รักษาความสะอาดอย่างอ่อนโยน:</strong> ล้างหน้าวันละ 2 ครั้งด้วยโฟมล้างหน้าสูตรอ่อนโยน ไม่ขัดถูหน้าแรงๆ</li>
+                <li><strong>เลือกใช้สกินแคร์ที่เหมาะสม:</strong> มองหาผลิตภัณฑ์ที่มีสารช่วยลดสิว เช่น Salicylic Acid (BHA), Benzoyl Peroxide หรือ Retinol และเลือกแบบ "Non-Comedogenic" (ไม่ก่อให้เกิดการอุดตัน)</li>
+                <li><strong>ห้ามบีบหรือแกะสิวเด็ดขาด:</strong> เพราะจะทำให้แบคทีเรียแพร่กระจายและทิ้งรอยดำ รอยแดง หรือแผลเป็นหลุมสิวไว้</li>
+                <li><strong>เติมความชุ่มชื้นและกันแดด:</strong> ผิวที่ขาดน้ำจะยิ่งผลิตน้ำมันออกมาเพิ่ม ดังนั้นควรทามอยส์เจอไรเซอร์เนื้อบางเบา และทาครีมกันแดดทุกวันเพื่อปกป้องผิวที่กำลังอ่อนแอ</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
