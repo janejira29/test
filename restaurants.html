@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านอาหารแนะนำ - จังหวัดสตูล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #0f514c;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Kanit', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        nav {
+            background-color: var(--primary-dark);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 400;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: white;
+            background-color: var(--primary);
+        }
+
+        .header-title {
+            background: linear-gradient(135deg, #0f766e, #042f2e);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-tag {
+            background-color: #fef3c7;
+            color: #d97706;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .card-title { font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+        .card-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 12px; }
+        .card-desc { font-size: 0.95rem; color: #475569; margin-bottom: 15px; flex-grow: 1; }
+        
+        .gps-box {
+            background-color: #f1f5f9;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        .btn-map {
+            display: block;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-map:hover { background-color: var(--primary-dark); }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-compass"></i> Satun Travel Guide</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
+                <li><a href="attractions.html"><i class="fa-solid fa-map-location-dot"></i> สถานที่ท่องเที่ยว & GPS</a></li>
+                <li><a href="restaurants.html" class="active"><i class="fa-solid fa-utensils"></i> ร้านอาหารแนะนำ</a></li>
+                <li><a href="hotels.html"><i class="fa-solid fa-hotel"></i> ที่พักแนะนำ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-title">
+        <h1>ร้านอาหารแนะนำ จังหวัดสตูล</h1>
+        <p>ลิ้มลองอาหารรสเด็ด อาหารทะเลสดๆ โรตี ชาชัก และเมนูท้องถิ่นสตูล</p>
+    </div>
+
+    <div class="container">
+        <div class="grid">
+            <!-- Restaurant 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">อาหารพื้นเมือง & ชาชัก</span>
+                    <h3 class="card-title">ร้านโรตีชาชัก ฟารีดา</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.เมืองสตูล</div>
+                    <p class="card-desc">ร้านโรตีและชาชักเจ้าดังในเมืองสตูล รสชาติกลมกล่อม ชาเข้มข้น แป้งโรตีกรอบนอกนุ่มใน มีเมนูให้เลือกหลากหลาย</p>
+                    <div class="gps-box">
+                        <i class="fa-solid fa-clock"></i> เปิด: 16:00 - 23:00 น.
+                    </div>
+                    <a href="https://maps.google.com/?q=6.6152,100.0673" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">อาหารทะเล / ซีฟู้ด</span>
+                    <h3 class="card-title">ร้านอาหารน้องนี ซีฟู้ด (หลีเป๊ะ)</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> เกาะหลีเป๊ะ อ.เมืองสตูล</div>
+                    <p class="card-desc">ร้านอาหารซีฟู้ดชื่อดังบนเกาะหลีเป๊ะ วัตถุดิบสดใหม่จากทะเล ทั้งกุ้ง ปู ปลาหมึก น้ำจิ้มซีฟู้ดรสเด็ดแซ่บสะใจ</p>
+                    <div class="gps-box">
+                        <i class="fa-solid fa-clock"></i> เปิด: 11:00 - 22:00 น.
+                    </div>
+                    <a href="https://maps.google.com/?q=6.4891,99.3055" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">อาหารใต้รสจัดจ้าน</span>
+                    <h3 class="card-title">ร้านอาหารครัวคนคอน สตูล</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.ละงู</div>
+                    <p class="card-desc">ร้านอาหารใต้รสชาติเข้มข้นตามตำรับใต้แท้ๆ เมนูเด่น เช่น แกงส้มปลากะพง แกงไตปลา และหมูคั่วเกลือ</p>
+                    <div class="gps-box">
+                        <i class="fa-solid fa-clock"></i> เปิด: 10:00 - 20:00 น.
+                    </div>
+                    <a href="https://maps.google.com/?q=6.8794,99.8051" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 คู่มือแนะนำการท่องเที่ยวจังหวัดสตูล (Satun Tourism Guide)</p>
+    </footer>
+
+</body>
+</html>

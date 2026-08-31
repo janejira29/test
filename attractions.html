@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่ท่องเที่ยวแนะนำ & GPS - จังหวัดสตูล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #0f514c;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Kanit', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        nav {
+            background-color: var(--primary-dark);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { color: white; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 400;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: white;
+            background-color: var(--primary);
+        }
+
+        .header-title {
+            background: linear-gradient(135deg, #0f766e, #042f2e);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-tag {
+            background-color: #ccfbf1;
+            color: var(--primary);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .card-title { font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+        .card-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 12px; }
+        .card-desc { font-size: 0.95rem; color: #475569; margin-bottom: 15px; flex-grow: 1; }
+        
+        .gps-box {
+            background-color: #f1f5f9;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-map {
+            display: block;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-map:hover { background-color: var(--primary-dark); }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-compass"></i> Satun Travel Guide</a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> หน้าหลัก</a></li>
+                <li><a href="attractions.html" class="active"><i class="fa-solid fa-map-location-dot"></i> สถานที่ท่องเที่ยว & GPS</a></li>
+                <li><a href="restaurants.html"><i class="fa-solid fa-utensils"></i> ร้านอาหารแนะนำ</a></li>
+                <li><a href="hotels.html"><i class="fa-solid fa-hotel"></i> ที่พักแนะนำ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-title">
+        <h1>สถานที่ท่องเที่ยวแนะนำ & พิกัด GPS</h1>
+        <p>ปักหมุดจุดเช็กอินยอดนิยมในจังหวัดสตูล พร้อมลิงก์นำทาง Google Maps</p>
+    </div>
+
+    <div class="container">
+        <div class="grid">
+            <!-- Place 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">ทะเลและเกาะ</span>
+                    <h3 class="card-title">เกาะหลีเป๊ะ (Lipe Island)</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.เมืองสตูล</div>
+                    <p class="card-desc">เกาะสวยน้ำใสฉายา "มัลดีฟส์เมืองไทย" โดดเด่นด้วยหาดทรายสีขาวนวล และจุดดำน้ำตื้นชมปะการังอันสมบูรณ์</p>
+                    <div class="gps-box">
+                        <span><i class="fa-solid fa-crosshairs"></i> 6.4886, 99.3039</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=6.4886,99.3039" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Place 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">อุทยานแห่งชาติ / ธรรมชาติ</span>
+                    <h3 class="card-title">อุทยานแห่งชาติหมู่เกาะเภตรา</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.ละงู</div>
+                    <p class="card-desc">ชมเขาปราสาทหินพันยอดอันยิ่งใหญ่ เดินบนสะพานข้ามกาลเวลา และชมฟอสซิลอายุหลายร้อยล้านปี</p>
+                    <div class="gps-box">
+                        <span><i class="fa-solid fa-crosshairs"></i> 6.8402, 99.7431</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=6.8402,99.7431" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Place 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">ถ้ำ / ป่าเขา</span>
+                    <h3 class="card-title">ถ้ำภูผาเพชร</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.มะนัง</div>
+                    <p class="card-desc">ถ้ำที่มีขนาดใหญ่อันดับ 4 ของโลก ภายในมีหินงอกหินย้อยทอประกายระยิบระยับยามโดนแสงไฟ</p>
+                    <div class="gps-box">
+                        <span><i class="fa-solid fa-crosshairs"></i> 7.1265, 100.0214</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=7.1265,100.0214" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Place 4 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">Geopark (อุทยานธรณี)</span>
+                    <h3 class="card-title">ถ้ำเลสเตโกดอน</h3>
+                    <div class="card-sub"><i class="fa-solid fa-location-dot"></i> อ.ทุ่งหว้า</div>
+                    <p class="card-desc">ถ้ำน้ำลอดความยาวกว่า 4 กม. สนุกกับการพายเรือแคนูชมความงดงามทางธรณีวิทยาและซากฟอสซิลช้างโบราณ</p>
+                    <div class="gps-box">
+                        <span><i class="fa-solid fa-crosshairs"></i> 7.1068, 99.7825</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=7.1068,99.7825" target="_blank" class="btn-map">
+                        <i class="fa-solid fa-map-location-dot"></i> นำทาง GPS (Google Maps)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 คู่มือแนะนำการท่องเที่ยวจังหวัดสตูล (Satun Tourism Guide)</p>
+    </footer>
+
+</body>
+</html>
